@@ -1,0 +1,47 @@
+.speed-dial {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+.speed-dial__options {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  text-align: center;
+}
+.speed-dial__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #ccc;
+  color: #333;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.2s, opacity 0.2s, transform 0.2s;
+}
+.speed-dial__button:active {
+  background: #aaa;
+}
+.speed-dial__button--primary {
+  margin-bottom: 0;
+  padding: 18px;
+  background: #333;
+  color: #eee;
+}
+.speed-dial__button:not(.speed-dial__button--primary) {
+  opacity: 0;
+  transform: translateY(40px);
+  visibility: hidden;
+}
+.speed-dial--active .speed-dial__button {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
